@@ -19,5 +19,6 @@ cat values.yaml
 # ACTUALIZA REPOSITORIO DE CHARTS DE HELM
 git config --global user.email "aesotillo@github.com"
 git config --global user.name "aesotillo DevOps BOT"
+git config --global --add safe.directory /github/workspace
 git add values.yaml && git commit -m "deploy to ${INPUT_ENVIRONMENT} version: ${INPUT_IMAGE_TAG} - product version: ${INPUT_PRODUCT_VERSION}" && git push --force origin develop
 
