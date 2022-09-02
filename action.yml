@@ -1,0 +1,15 @@
+name: 'Update helm chart repository'
+description: 'Construye imagen docker'
+inputs:
+  IMAGE_TAG:
+    description: 'TAG Version Docker Image'
+    required: true
+  ENVIRONMENT:
+    description: 'Environment to deploy. dev, uat, prd, etc'
+    required: true
+  PRODUCT_VERSION:
+    description: 'Product version. v1, v2, etc'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
